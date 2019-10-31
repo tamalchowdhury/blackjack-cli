@@ -21,7 +21,7 @@
 WIDTH = 30
 
 
-def draw_line(cards=[]):
+def draw_line(cards=[], is_hidden=False):
     line = ""
     line += "||"
     half_space = (WIDTH-4)//2
@@ -32,8 +32,11 @@ def draw_line(cards=[]):
     for i in range(half_space):
         line += " "
     if cards:
-        for card in cards:
-            line += "[" + str(card) + "]"
+        for i, card in enumerate(cards):
+            if is_hidden and i == 1:
+                line += "[▒]"
+            else:
+                line += "[" + str(card) + "]"
         # for the extra spacing for fit
         if not len(cards) % 2 == 0:
             line += " "
@@ -43,15 +46,14 @@ def draw_line(cards=[]):
     print(line)
 
 
-def draw_table(dealer_cards, player_cards, is_dealer_hidden):
+def draw_table(dealer_cards, player_cards, is_hidden):
     # draw the top border:
     border = ""
     for i in range(WIDTH):
         border += "="
-    print(" ")  # blank line
     print(border)
     draw_line()
-    draw_line(dealer_cards)
+    draw_line(dealer_cards, is_hidden)
     draw_line()
     draw_line()
     draw_line()

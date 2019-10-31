@@ -59,7 +59,7 @@ while player_money and playing:
         # print the dealer and player cards:
         print("Dealer is dealing...")
         time.sleep(2)
-        table.draw_table(dealer_hand, player_hand, True)
+        table.draw_table(dealer_hand, player_hand, False)
         print("Your card total =", player_card_count)
         print("Dealer card total =", dealer_card_count)
         if is_player_standing:
@@ -77,7 +77,7 @@ while player_money and playing:
             result = "YOU WIN!"
 
     # Print the table at the end:
-    table.draw_table(dealer_hand, player_hand, True)
+    table.draw_table(dealer_hand, player_hand, False)
     print("Your card total =", player_card_count)
     print("Dealer card total =", dealer_card_count)
     print(result, "Total money:", player_money)
