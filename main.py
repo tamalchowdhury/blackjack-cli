@@ -1,6 +1,7 @@
 import random
 import lib
 import table
+import time
 # Python blackjack main file
 
 player_money = 100
@@ -34,11 +35,8 @@ while player_money and playing:
 
     # first loop to keep dealing for the player
     while player_card_count < 21 and action == 'h':
-        print("++++ YOU DEAL ++++")
-        print("Dealer hand:")
-        print("[A],[-] = ?")
-        print("Your hand:")
-        print(lib.print_card(player_hand), "=", player_card_count)
+        table.draw_table(dealer_hand, player_hand, True)
+        print("Card total =", player_card_count)
         print("Do you want to hit/stick?")
         action = str.lower(input())
         # if the player hits, draw a new card:
@@ -59,11 +57,11 @@ while player_money and playing:
     # player is still standing, deal the dealer:
     while is_player_standing and is_dealer_standing:
         # print the dealer and player cards:
-        print("++++ DEALER DEALS ++++")
-        print("Dealer hand:")
-        print(lib.print_card(dealer_hand), "=", dealer_card_count)
-        print("Your hand:")
-        print(lib.print_card(player_hand), "=", player_card_count)
+        print("Dealer is dealing...")
+        time.sleep(2)
+        table.draw_table(dealer_hand, player_hand, True)
+        print("Your card total =", player_card_count)
+        print("Dealer card total =", dealer_card_count)
         if is_player_standing:
             dealer_hand.append(lib.draw_card())
             dealer_card_count = lib.calculate_score(dealer_hand)
@@ -79,14 +77,11 @@ while player_money and playing:
             result = "YOU WIN!"
 
     # Print the table at the end:
-    print("Your hand:")
-    print(lib.print_card(player_hand), "=", player_card_count)
-    print("Dealer hand:")
-    print(lib.print_card(dealer_hand), "=", dealer_card_count)
-    print(result)
-    print("Total money:", player_money)
-    print("-----------------------------")
-    cont = input("Continue? y/n")
+    table.draw_table(dealer_hand, player_hand, True)
+    print("Your card total =", player_card_count)
+    print("Dealer card total =", dealer_card_count)
+    print(result, "Total money:", player_money)
+    cont = input("<<< CONTINUE? >>> y/n\n")
     if str.lower(cont) == 'n':
         playing = False
     round_number += 1

@@ -48,6 +48,7 @@ def draw_table(dealer_cards, player_cards, is_dealer_hidden):
     border = ""
     for i in range(WIDTH):
         border += "="
+    print(" ")  # blank line
     print(border)
     draw_line()
     draw_line(dealer_cards)
