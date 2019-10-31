@@ -1,0 +1,8 @@
+## bugs that needs to be fixed
+
+21 shows black jack
+
+keeps looping when player and dealer are still standing.
+
+implement main loop and game end state.
+

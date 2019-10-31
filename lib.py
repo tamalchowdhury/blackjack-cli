@@ -27,7 +27,7 @@ def calculate_score(card_list):
 
     if aces:
         for ace in range(aces):
-            if score > 11:
+            if score >= 11:
                 score += 1
             else:
                 score += 11
