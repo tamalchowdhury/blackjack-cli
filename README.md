@@ -12,7 +12,8 @@ Terminal based black jack game in Python
 ||          [K][3]          ||
 ||                          ||
 ==============================
-BLACK-JACK!!```
+BLACK-JACK!!
+```
 
 to start:
 
