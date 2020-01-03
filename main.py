@@ -8,11 +8,9 @@ player_money = 100
 round_number = 1
 playing = True
 
-print("BLACK-JACK!!")
-
 
 while player_money and playing:
-    print("Round:", round_number)
+
     # draw a card:
     # draws a random card out of the deck
 
@@ -36,6 +34,8 @@ while player_money and playing:
     # first loop to keep dealing for the player
     while player_card_count < 21 and action == 'h':
         table.draw_table(dealer_hand, player_hand, True)
+        print("BLACK-JACK!!")
+        print("Round:", round_number)
         print("Card total =", player_card_count)
         print("Do you want to hit/stick?")
         action = str.lower(input())
