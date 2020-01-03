@@ -21,7 +21,3 @@ to start:
 
 press h to hit, s to stick
 y to continue, n to end
-
-```
-
-```
