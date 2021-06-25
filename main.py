@@ -37,7 +37,7 @@ while player_money and playing:
         print("BLACK-JACK!!")
         print("Round:", round_number)
         print("Card total =", player_card_count)
-        print("Do you want to hit/stick?")
+        print("Do you want to [h]it/[s]tick?")
         action = str.lower(input())
         # if the player hits, draw a new card:
         if action == 'h':

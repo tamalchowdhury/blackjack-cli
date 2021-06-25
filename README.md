@@ -1,5 +1,7 @@
 # Python Black Jack game (Terminal Based)
 
+![Python Blackjack](https://raw.githubusercontent.com/tamalweb/blackjack-cli/master/screenshot.png)
+
 Terminal based black jack game in Python
 
 ```
