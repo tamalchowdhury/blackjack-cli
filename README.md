@@ -23,3 +23,7 @@ to start:
 
 press h to hit, s to stick
 y to continue, n to end
+
+How to play BlackJack? Watch this explainer video:
+
+https://www.youtube.com/watch?v=xjqTIzYkGdI
